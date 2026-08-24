@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IMTEYAZ Catalog — Admin</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="logo">⚙️ Catalog Admin</div>
+</header>
+
+<div class="container">
+
+  <div class="adminForm">
+    <h3>नया Item जोड़ें</h3>
+
+    <input type="text" id="nameInput" placeholder="नाम (जैसे: लाल साड़ी)">
+    <input type="text" id="tagsInput" placeholder="Tags (कॉमा से अलग करें, जैसे: साड़ी, लाल, ऑफर)">
+    <input type="text" id="priceInput" placeholder="Price (जैसे: ₹1,499) — ज़रूरी नहीं">
+    <input type="text" id="sizeInput" placeholder="Size (जैसे: M, L, XL) — ज़रूरी नहीं">
+    <textarea id="noteInput" placeholder="Note / Description — ज़रूरी नहीं" rows="2"></textarea>
+
+    <label class="fileLabel">📷 Images चुनें (कई एक साथ चुन सकते हैं)</label>
+    <input type="file" id="imagesInput" accept="image/*" multiple>
+
+    <label class="fileLabel">🎬 Videos चुनें (छोटे clips, कई चुन सकते हैं)</label>
+    <input type="file" id="videosInput" accept="video/*" multiple>
+
+    <button id="saveProductBtn">💾 Save Item</button>
+    <p id="uploadStatus" class="uploadStatus"></p>
+  </div>
+
+  <hr>
+
+  <h3>मौजूदा Items</h3>
+  <input type="text" id="adminSearchBox" placeholder="🔍 list में खोजें...">
+  <div id="adminList" class="adminList"></div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
+<script src="admin.js"></script>
+
+</body>
+</html>
